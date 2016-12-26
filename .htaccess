@@ -1,0 +1,16 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+ErrorDocument 404 /404
+
+AuthUserFile /var/www/39rescue.cf/public_html/.htpasswd
+AuthType Basic
+AuthName "Register"
+
+<Files "register.php">
+    Require valid-user
+</Files>

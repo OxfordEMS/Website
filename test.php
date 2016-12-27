@@ -20,3 +20,12 @@ echo date("m/d/y h:i A", strtotime("now"));
 echo "<br />";
 echo "<br />";
 echo "<br />";
+
+echo "test";
+
+echo $_SERVER['REMOTE_ADDR'];
+echo "<br />";
+echo $_SERVER['HTTP_X_FORWARDED_FOR'];
+echo "<br />";
+echo $_SERVER['HTTP_CLIENT_IP'];
+echo "test";

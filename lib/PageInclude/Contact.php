@@ -1,4 +1,18 @@
 <h1 class="text-lg-center">Contact Us</h1>
+<?php
+#ALERTS
+
+if (isset($_GET['sp'])) {
+    echo('
+        <div class="alert alert-success alert-dismissable fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Success!</strong> We have received your message and will get back to you ASAP!
+        </div>
+    ');
+}
+?>
 <hr>
 <div class="row">
     <div class="col-md-4">
@@ -18,6 +32,9 @@
 </div>
 
 <form action="lib/Actions/POST/Contact.php" enctype="multipart/form-data" method="post">
+
+    <input type="hidden" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
+
     <div class="form-group row">
         <label for="name" class="col-sm-1 col-form-label"><b>Name</b><sup class="text-danger">*</sup></label>
         <div class="col-sm-5">

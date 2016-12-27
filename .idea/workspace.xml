@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07da810e-4ec9-4c03-ab04-d93b93982bea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Actions/GET/CloseContact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ModInclude/Admin/Contact.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/PageInclude/Admin/Index.php" afterPath="$PROJECT_DIR$/lib/PageInclude/Admin/Index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php" afterPath="$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Functions.php" afterPath="$PROJECT_DIR$/lib/Functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ModInclude/Admin/Members.php" afterPath="$PROJECT_DIR$/lib/ModInclude/Admin/Members.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/PageInclude/Members.php" afterPath="$PROJECT_DIR$/lib/PageInclude/Members.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +38,67 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Members.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ModInclude/Admin/Members.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding>
+                <marker date="1482810299941" expanded="true" signature="289:314" ph="SELECT * FRO... members" />
+                <marker date="1482810299941" expanded="true" signature="289:332" ph="SELECT * FRO... members" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Members.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/PageInclude/Members.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="157" column="24" lean-forward="false" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
+              <folding>
+                <marker date="1482810468204" expanded="true" signature="380:428" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="867:921" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="1610:1660" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="2101:2156" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="2602:2652" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="3093:3143" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="3792:3817" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="5154:5179" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="5984:6032" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="6567:6612" ph="SELECT * FRO... members" />
+                <marker date="1482810468204" expanded="true" signature="6849:6866" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditMember.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/PageInclude/Admin/EditMember.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1482772941000" expanded="true" signature="748:790" ph="SELECT * FRO... members" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateMember.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <marker date="1482810685024" expanded="true" signature="513:881" ph="UPDATE e39.m... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +115,10 @@
         <option value="$PROJECT_DIR$/lib/Actions/GET/CloseContact.php" />
         <option value="$PROJECT_DIR$/lib/PageInclude/Admin/Index.php" />
         <option value="$PROJECT_DIR$/lib/ModInclude/Admin/Contact.php" />
+        <option value="$PROJECT_DIR$/lib/Functions.php" />
+        <option value="$PROJECT_DIR$/lib/ModInclude/Admin/Members.php" />
+        <option value="$PROJECT_DIR$/lib/PageInclude/Members.php" />
+        <option value="$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php" />
       </list>
     </option>
   </component>
@@ -219,10 +284,6 @@
               <option name="myItemId" value="Actions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GET" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -310,7 +371,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482795040027</updated>
       <workItem from="1482795041543" duration="418000" />
-      <workItem from="1482798052301" duration="5153000" />
+      <workItem from="1482798052301" duration="8465000" />
     </task>
     <task id="LOCAL-00001" summary="Update .gitignore&#10;">
       <created>1482795213789</created>
@@ -333,18 +394,25 @@
       <option name="project" value="LOCAL" />
       <updated>1482802985316</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Contact Us module pretty much completed">
+      <created>1482807965133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1482807965133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7647000" />
+    <option name="totallyTimeSpent" value="10959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1641791" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1641791" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -374,7 +442,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update .gitignore&#10;" />
     <MESSAGE value="Initial Contact Us functionality completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Contact Us functionality completed" />
+    <MESSAGE value="Contact Us module pretty much completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact Us module pretty much completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -538,14 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Actions/GET/CloseContact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -554,24 +615,6 @@
             <marker date="1482804614202" expanded="true" signature="196:219" ph="UPDATE e39.m... " />
             <marker date="1482804614202" expanded="true" signature="196:240" ph="UPDATE e39.c... " />
             <marker date="1482804614202" expanded="true" signature="196:241" ph="UPDATE e39.c... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/PageInclude/Admin/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-          <folding>
-            <marker date="1482804988268" expanded="true" signature="303:580" ph="..." />
-            <marker date="1482804988268" expanded="true" signature="392:470" ph="..." />
-            <marker date="1482804988268" expanded="false" signature="435:442" ph="×" />
-            <marker date="1482804988268" expanded="true" signature="713:987" ph="..." />
-            <marker date="1482804988268" expanded="true" signature="802:880" ph="..." />
-            <marker date="1482804988268" expanded="false" signature="845:852" ph="×" />
-            <marker date="1482804988268" expanded="true" signature="1120:1374" ph="..." />
-            <marker date="1482804988268" expanded="true" signature="1209:1287" ph="..." />
-            <marker date="1482804988268" expanded="true" signature="1252:1259" ph="×" />
           </folding>
         </state>
       </provider>
@@ -601,6 +644,110 @@
           <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding>
             <marker date="1482772106000" expanded="true" signature="1157:1223" ph="SELECT * FRO... news" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/members.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="46" column="37" lean-forward="false" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <marker date="1482809279218" expanded="true" signature="133:158" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="517:542" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="903:928" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="1296:1321" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="1694:1719" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="2100:2125" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="2428:2453" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="2756:2781" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="3089:3114" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="3430:3455" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="3765:3790" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="4099:4124" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="4439:4464" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="4781:4806" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="5120:5145" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="5454:5479" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="5787:5812" ph="SELECT * FRO... members" />
+            <marker date="1482809279218" expanded="true" signature="6123:6145" ph="SELECT * FRO... news" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PageInclude/Admin/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <marker date="1482804988268" expanded="true" signature="303:580" ph="..." />
+            <marker date="1482804988268" expanded="true" signature="392:470" ph="..." />
+            <marker date="1482804988268" expanded="false" signature="435:442" ph="×" />
+            <marker date="1482804988268" expanded="true" signature="713:987" ph="..." />
+            <marker date="1482804988268" expanded="true" signature="802:880" ph="..." />
+            <marker date="1482804988268" expanded="false" signature="845:852" ph="×" />
+            <marker date="1482804988268" expanded="true" signature="1120:1374" ph="..." />
+            <marker date="1482804988268" expanded="true" signature="1209:1287" ph="..." />
+            <marker date="1482804988268" expanded="true" signature="1252:1259" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ModInclude/Admin/Members.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <marker date="1482810299941" expanded="true" signature="289:314" ph="SELECT * FRO... members" />
+            <marker date="1482810299941" expanded="true" signature="289:332" ph="SELECT * FRO... members" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PageInclude/Members.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="157" column="24" lean-forward="false" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
+          <folding>
+            <marker date="1482810468204" expanded="true" signature="380:428" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="867:921" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="1610:1660" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="2101:2156" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="2602:2652" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="3093:3143" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="3792:3817" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="5154:5179" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="5984:6032" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="6567:6612" ph="SELECT * FRO... members" />
+            <marker date="1482810468204" expanded="true" signature="6849:6866" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PageInclude/Admin/EditMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1482772941000" expanded="true" signature="748:790" ph="SELECT * FRO... members" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Actions/POST/UpdateMember.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <marker date="1482810685024" expanded="true" signature="513:881" ph="UPDATE e39.m... " />
           </folding>
         </state>
       </provider>

@@ -44,7 +44,7 @@ function isEMTDisp($user) {
 
     while ($row = mysql_fetch_array($res)) {
         if ($row['username'] == $user) {
-            if ($row['isEMT'] == 1) {
+            if ($row['isEMT'] == "Yes") {
                 return ", EMT";
             }
         }

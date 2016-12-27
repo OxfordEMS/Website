@@ -12,7 +12,7 @@
     $con = mysql_connect(HOST, USER, PASS);
     mysql_select_db(DB, $con);
 
-    $res = mysql_query("SELECT * FROM e39.members");
+    $res = mysql_query("SELECT * FROM e39.members ORDER BY lastName ");
 
     while ($row = mysql_fetch_array($res)) {
         echo('<tr>');

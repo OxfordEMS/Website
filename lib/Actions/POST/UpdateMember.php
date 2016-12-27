@@ -25,7 +25,7 @@ $sql = "UPDATE e39.members SET `firstName` = '" . $firstName . "', `lastName` = 
  `dob` = '" . $DOB . "',`address` = '" . $address . "',`cellPhone` = '" . $cellPhone . "',`homePhone` = '" . $homePhone . "',
  `rank` = '" . $rank . "',`isEMT` = '" . $emt . "',`tType` = '" . $tType . "' WHERE id = " . $id . ";";
 if ($con->query($sql) == true) {
-    header('Location: /admin?ud?=' . $username);
+    header('Location: /admin?ud=' . $username);
 } else {
     echo "Error: " . $sql . "<br /><br />" . $con->error;
 }

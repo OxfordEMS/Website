@@ -99,9 +99,9 @@
                 <li class="nav-item float-lg-right">
                     <a class="nav-link" href="/squad"><b>Squad Panel</b></a>
                 </li>
-                <span class="navbar-text float-xs-right text-muted">
-                        <b>User: </b> ' . $user . '
-                </span>
+                <li class="nav-item float-lg-right">
+                        <a class="nav-link" href="/profile"><b>User: </b> ' . $user . '</a>
+                </li>
                 ');
             } else {
                 echo('

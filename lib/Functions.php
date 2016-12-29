@@ -54,6 +54,30 @@ function isEMTDisp($user) {
     return false;
 }
 
+function isEMTDispSEL($user, $yn) {
+    $con = mysql_connect(HOST, USER, PASS);
+    mysql_select_db(DB, $con);
+
+    $res = mysql_query("SELECT * FROM e39.members");
+
+    while ($row = mysql_fetch_array($res)) {
+        if ($row['username'] == $user) {
+            if ($yn == "Y") {
+                if ($row['isEMT'] == "Yes") {
+                    return " selected";
+                }
+            } elseif ($yn == "N") {
+                if ($row['isEMT'] == "No") {
+                    return " selected";
+                }
+            }
+        }
+    }
+
+    mysql_close($con);
+    return;
+}
+
 function isSupport($user) {
     $con = mysql_connect(HOST, USER, PASS);
     mysql_select_db(DB, $con);
@@ -266,6 +290,24 @@ function getRank($user) {
     return 0;
 }
 
+function getRankDispSEL($user, $rank) {
+    $con = mysql_connect(HOST, USER, PASS);
+    mysql_select_db(DB, $con);
+
+    $res = mysql_query("SELECT * FROM e39.members");
+
+    while ($row = mysql_fetch_array($res)) {
+        if ($row['username'] == $user) {
+            if ($row['rank'] == $rank) {
+                return " selected";
+            }
+        }
+    }
+
+    mysql_close($con);
+    return 0;
+}
+
 function getTType($user) {
     $con = mysql_connect(HOST, USER, PASS);
     mysql_select_db(DB, $con);
@@ -280,6 +322,30 @@ function getTType($user) {
 
     mysql_close($con);
     return 0;
+}
+
+function getTTYpeDispSEL($user, $team) {
+    $con = mysql_connect(HOST, USER, PASS);
+    mysql_select_db(DB, $con);
+
+    $res = mysql_query("SELECT * FROM e39.members");
+
+    while ($row = mysql_fetch_array($res)) {
+        if ($row['username'] == $user) {
+            if ($team == "Squad") {
+                if ($row['tType'] == "Squad") {
+                    return " selected";
+                }
+            } elseif ($team == "Support") {
+                if ($row['tType'] == "Support") {
+                    return " selected";
+                }
+            }
+        }
+    }
+
+    mysql_close($con);
+    return false;
 }
 
 function getPostTitle($id) {

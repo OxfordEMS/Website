@@ -1,8 +1,21 @@
 <?php
-$id = $_GET['id'];
+$id = getUserID($user);
 $us = getUserFromID($id);
 ?>
-<h2 class="text-lg-center">Member Information - <small><?php echo getUserFromID($id)?></h2>
+<h2 class="text-lg-center">Edit Profile</h2>
+
+<?php
+if (isset($_GET['up'])) {
+    echo('
+        <div class="alert alert-success alert-dismissable fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Success!</strong> You have successfully updated your profile!
+        </div>
+    ');
+}
+?>
 
 
 
@@ -16,9 +29,6 @@ $us = getUserFromID($id);
                 <a class="nav-link" data-toggle="tab" role="tab" href="#ci">Contact Information</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" role="tab" href="#si">Squad Information</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" role="tab" href="#ceri">Certifications</a>
             </li>
         </ul>
@@ -27,7 +37,7 @@ $us = getUserFromID($id);
         <div class="tab-content">
             <!--PERSONAL INFORMATION-->
             <div class="tab-pane active" id="pi" role="tabpanel">
-                <form action="lib/Actions/POST/UpdateMemberPI.php" enctype="multipart/form-data" method="post">
+                <form action="lib/Actions/POST/UpdateProfilePI.php" enctype="multipart/form-data" method="post">
                     <?php
 
                     $con = mysql_connect(HOST, USER, PASS);
@@ -51,12 +61,6 @@ $us = getUserFromID($id);
                         echo('<label for="lastName" >Last Name</label>');
                         echo('<input type="text" class="form-control" id="lastName" name="lastName" value="' . $row['lastName'] . '">');
                         echo('</div>');
-                        #USERNAME
-                        echo('<div class="form-group">');
-                        echo('<label for="username" >Username</label>');
-                        echo('<input type="text" class="form-control" id="username" name="username" value="' . $row['username'] . '">');
-                        echo('<small id="username" class="form-text text-muted">Username must be first initial and full last name i.e. PHissm</small>');
-                        echo('</div>');
                         #DOB
                         echo('<div class="form-group">');
                         echo('<label for="DOB" >DOB</label>');
@@ -64,10 +68,7 @@ $us = getUserFromID($id);
                         echo('</div>');
 
                         #SUBMIT
-                        echo('<div class="btn-group" role="group" aria-label="Actions">');
-                        echo('<button type="submit" class="btn btn-outline-danger">Update</button>');
-                        echo('<a href="/admin" class="btn btn-outline-primary" role="button">Back</a>');
-                        echo('</div>');
+                        echo('<button type="submit" class="btn btn-outline-primary">Update</button>');
                     }
 
                     ?>
@@ -75,7 +76,7 @@ $us = getUserFromID($id);
             </div>
             <!--CONTACT INFORMATION-->
             <div class="tab-pane" id="ci" role="tabpanel">
-                <form action="lib/Actions/POST/UpdateMemberCI.php" enctype="multipart/form-data" method="post">
+                <form action="lib/Actions/POST/UpdateProfileCI.php" enctype="multipart/form-data" method="post">
                     <?php
 
                     $con = mysql_connect(HOST, USER, PASS);
@@ -121,67 +122,9 @@ $us = getUserFromID($id);
                     ?>
                 </form>
             </div>
-            <!--SQUAD INFORMATION-->
-            <div class="tab-pane" id="si" role="tabpanel">
-                <form action="lib/Actions/POST/UpdateMemberSI.php" enctype="multipart/form-data" method="post">
-                    <?php
-
-                    $con = mysql_connect(HOST, USER, PASS);
-                    mysql_select_db(DB, $con);
-
-                    $res = mysql_query("SELECT * FROM e39.members WHERE id = '$id'");
-
-                    while ($row = mysql_fetch_array($res)) {
-
-                        #SQUAD INFORMATION
-                        echo('<input type="hidden" name="id" value="' . $row['id'] . '">');
-
-
-                        #RANK
-                        echo('<div class="form-group">');
-                        echo('<label for="rank" >Position</label>');
-                        echo('<select class="form-control" id="rank" name="rank">');
-                        echo('<optgroup label="Officer">');
-                        echo('<option value="Capitan" ' . getRankDispSEL($row['username'], "Capitan") . '>Capitan</option>');
-                        echo('<option value="Asst. Capitan" ' . getRankDispSEL($row['username'], "Asst. Capitan") . '>Asst. Capitan</option>');
-                        echo('</optgroup>');
-                        echo('<optgroup label="Corprate">');
-                        echo('<option value="President" ' . getRankDispSEL($row['username'], "President") . '>President</option>');
-                        echo('<option value="Vice President" ' . getRankDispSEL($row['username'], "Vice President") . '>Vice President</option>');
-                        echo('<option value="Secretary" ' . getRankDispSEL($row['username'], "Secretary") . '>Secretary</option>');
-                        echo('<option value="Treasurer" ' . getRankDispSEL($row['username'], "Treasurer") . '>Treasurer</option>');
-                        echo('</optgroup>');
-                        echo('<optgroup label="General">');
-                        echo('<option value="Member" ' . getRankDispSEL($row['username'], "Member") . '>Member</option>');
-                        echo('<option value="Junior" ' . getRankDispSEL($row['username'], "Junior") . '>Junior</option>');
-                        echo('<option value="Cadet" ' . getRankDispSEL($row['username'], "Cadet") . '>Cadet</option>');
-                        echo('<option value="Charter" ' . getRankDispSEL($row['username'], "Charter Member") . '>Charter</option>');
-                        echo('<option value="Life" ' . getRankDispSEL($row['username'], "Life") . '>Life Member</option>');
-                        echo('</optgroup>');
-                        echo('</select>');
-                        echo('</div>');
-                        #TEAM TYPE
-                        echo('<div class="form-group">');
-                        echo('<label for="tType" >Team</label>');
-                        echo('<select class="form-control" id="tType" name="tType">');
-                        echo('<option value="Squad" ' . getTTypeDispSEL($row['username'], "Squad") . '>Squad Member</option>');
-                        echo('<option value="Support" ' . getTTypeDispSEL($row['username'], "Support") . '>Support Team</option>');
-                        echo('</select>');
-                        echo('</div>');
-
-                        #SUBMIT
-                        echo('<div class="btn-group" role="group" aria-label="Actions">');
-                        echo('<button type="submit" class="btn btn-outline-danger">Update</button>');
-                        echo('<a href="/admin" class="btn btn-outline-primary" role="button">Back</a>');
-                        echo('</div>');
-                    }
-
-                    ?>
-                </form>
-            </div>
-            <!--CERTIFICATIONS-->
+            <!--CERTIFICATIONS--><!--TODO Finish certifications module, transfer certs to certification module-->
             <div class="tab-pane" id="ceri" role="tabpanel">
-                <form action="lib/Actions/POST/UpdateMemberCERTI.php" enctype="multipart/form-data" method="post">
+                <form action="lib/Actions/POST/UpdateProfileCERTI.php" enctype="multipart/form-data" method="post">
                     <?php
 
                     $con = mysql_connect(HOST, USER, PASS);
@@ -195,14 +138,6 @@ $us = getUserFromID($id);
                         echo('<input type="hidden" name="id" value="' . $row['id'] . '">');
 
 
-                        #EMT
-                        echo('<div class="form-group">');
-                        echo('<label for="EMT" >EMT</label>');
-                        echo('<select class="form-control" id="EMT" name="EMT">');
-                        echo('<option value="Yes" ' . isEMTDispSEL($row['username'], "Y") . '>Yes</option>');
-                        echo('<option value="No" ' . isEMTDispSEL($row['username'], "N") . '>No</option>');
-                        echo('</select>');
-                        echo('</div>');
                         #OEMS ID
                         echo('<div class="form-group">');
                         echo('<label for="oems" >OEMS ID</label>');

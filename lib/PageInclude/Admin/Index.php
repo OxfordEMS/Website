@@ -18,7 +18,7 @@ if (isset($_GET['ud'])) {
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <strong>Success!</strong> Member, <b>' . $_GET['ud'] . '</b> successfully updated!
+            <strong>Success!</strong> Member, <a class="alert-link" href="/EditMember?id=' . getUserID($_GET['ud']) . '"><b>' . $_GET['ud'] . '</b></a> successfully updated!
         </div>
     ');
 } elseif (isset($_GET['nnp'])) {

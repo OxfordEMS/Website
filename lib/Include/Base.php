@@ -96,9 +96,13 @@
                     ');
                 }
                 echo('
-                <li class="nav-item float-lg-right">
-                    <a class="nav-link" href="/squad"><b>Squad Panel</b></a>
-                </li>
+                <li class="nav-item dropdown float-lg-right">
+                <a class="nav-link dropdown-toggle" href="/" id="squadDT" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Squad Panel</b></a>
+                <div class="dropdown-menu" aria-labelledby="squadDT">
+                    <a class="dropdown-item" href="/squad">Main Panel</a>
+                    <a class="dropdown-item" href="/squad?calls">Call Management</a>
+                </div>
+            </li>
                 <li class="nav-item float-lg-right">
                         <a class="nav-link" href="/profile"><b>User: </b> ' . $user . '</a>
                 </li>

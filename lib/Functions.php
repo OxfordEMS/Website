@@ -376,3 +376,27 @@ function backOne($page) {
 function forwardOne($page) {
     return $page + 1;
 }
+
+function getFormCallType($type) {
+    $con = mysql_connect(HOST, USER, PASS);
+    mysql_select_db(DB, $con);
+
+    $res = mysql_query("SELECT * FROM e39.callTypes");
+
+    while ($row = mysql_fetch_array($res)) {
+        if ($row['name'] == $type) {
+            if ($row['type'] == 'EMS') {
+                return '<span class="tag tag-success">' . $row['name'] . '</span>';
+            } elseif ($row['type'] == 'FIRE') {
+                return '<span class="tag tag-danger">' . $row['name'] . '</span>';
+            } elseif ($row['type'] == 'POLICE') {
+                return '<span class="tag tag-primary">' . $row['name'] . '</span>';
+            } else {
+                return '<span class="tag tag-default">' . $row['name'] . '</span>';
+            }
+        }
+    }
+
+    mysql_close($con);
+    return 0;
+}
